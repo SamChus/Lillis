@@ -97,7 +97,7 @@ p {
   position: fixed;
   top: 0;
   right: 0;
-  width: 200px;
+  width: 50%;
   height: 100vh;
   background: #fff;
 }
@@ -608,11 +608,11 @@ p {
 
 /* Dashboard */
 .dashboard {
-  padding: 44px 10px 25px 90px;
+  padding: 44px 10px 25px 100px;
 }
 
 .dash__greeting {
-  max-width: 90px;
+  max-width: 85px;
   margin: 0 auto;
 }
 
@@ -722,7 +722,7 @@ p {
 }
 
 .card {
-  width: calc(202px + 10px);
+  width: calc(202px + 14px);
   border: 0.3px solid #00302e68;
   padding: 30px;
   text-align: center;
@@ -784,7 +784,7 @@ p {
   margin-bottom: 40px;
 }
 .cart__start img {
-  width: 80px;
+  width: 70px;
   height: fit-content;
   justify-self: center;
   margin-right: 10px;
