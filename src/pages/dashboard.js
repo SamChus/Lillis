@@ -20,7 +20,7 @@ const Dashboard = ({
       <div className="flex--box dash__header">
         <div className="dash__greeting">
           <h1>{`Hello ${user.name}`}</h1>
-          <p>Looking for an easy, healthy and budget-friendly meal you will love? Try Lilies Food</p>
+          <p>Your are welcome</p>
         </div>
         <div>
           <img src={avatar} alt="profile" className="avatar" />

@@ -58,7 +58,7 @@ const FoodCard = ({
             position: "absolute",
             height: "100vh",
             top: "0px",
-            left: "45%",
+            left: "40%",
             right: "0px",
             border: "none",
             background: "#fff",
