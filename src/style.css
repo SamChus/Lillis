@@ -532,7 +532,6 @@ p {
   }
 
   .login__input input {
-
     color: #333;
   }
 
@@ -721,7 +720,7 @@ p {
 
 /* Card */
 .grid.all__card{
-  justify-content: end;
+  justify-content: center;
   gap: 25px;
 }
 
