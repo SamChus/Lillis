@@ -36,7 +36,7 @@ const Checkout = () => {
             position: "absolute",
             height: "100vh",
             top: "0px",
-            left: "50%",
+            left: "70%",
             right: "0px",
             border: "none",
             background: "#fff",
