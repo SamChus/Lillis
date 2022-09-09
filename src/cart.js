@@ -455,7 +455,7 @@ p {
 }
 
 .login__input input {
-  color: #333;
+  color: #fff;
   display: block;
   width: 120%;
   margin: 34px 0;
@@ -788,7 +788,7 @@ p {
   margin-bottom: 40px;
 }
 .cart__start img {
-  width: 60px;
+  width: 80px;
   height: fit-content;
   justify-self: center;
   margin-right: 10px;
