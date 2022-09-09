@@ -29,7 +29,7 @@ const Order = ({ cartItem, handleDelete, count }) => {
             position: "absolute",
             height: "100vh",
             top: "0px",
-            left: "30%",
+            left: "45%",
             right: "0px",
             border: "none",
             background: "#fff",

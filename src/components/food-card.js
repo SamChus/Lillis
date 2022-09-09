@@ -58,7 +58,7 @@ const FoodCard = ({
             position: "absolute",
             height: "100vh",
             top: "0px",
-            left: "30%",
+            left: "45%",
             right: "0px",
             border: "none",
             background: "#fff",
@@ -75,10 +75,10 @@ const FoodCard = ({
               <div className="details__start">
                 <img src={item.image} alt="details" />
                 <h3>{item.name}</h3>
-                <p>{item.content}</p>
+                <p>{item.main}</p>
               </div>
               <div className="flex--box details__center">
-                <p>NGN 2000</p>
+                <p>{item.price}</p>
                 <p>10-20 Mins</p>
                 <p>10 Pcs Avail</p>
               </div>
