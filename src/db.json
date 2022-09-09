@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Stir fry Pasta",
+    "content": "Stir fry Paste yada yada yada because of the season",
+    "price": "N1,000",
+    "image": "images/image-2.png",
+    "count": 0,
+    "ready": true
+  },
+  {
+    "id": 2,
+    "name": "Meat Balls",
+    "content": "Meat Balls yada yada yada because of the season",
+    "price": "N1,200",
+    "image": "images/image-3.png",
+    "count": 0,
+    "ready": false
+  },
+  {
+    "id": 3,
+    "name": "Burger Meal",
+    "content": "Burger Meal Paste yada yada yada because of the season",
+    "price": "N1,500",
+    "image": "images/image-4.png",
+    "count": 0,
+    "ready": true
+  },
+  {
+    "id": 4,
+    "name": "Fried Indomie",
+    "content": "Fried Indomie yada yada yada because of the season",
+    "price": "N1250",
+    "image": "images/image-1.png",
+    "count": 0,
+    "ready": true
+  },
+  {
+    "id": 5,
+    "name": "SandWich",
+    "content": "SandWich yada yada yada because of the season",
+    "price": "N1,350",
+    "image": "images/image-5.png",
+    "count": 0,
+    "ready": true
+  },
+  {
+    "id": 6,
+    "name": "Soup Meal",
+    "content": "Soup Meal yada yada yada because of the season",
+    "price": "N1,100",
+    "image": "images/image-6.png",
+    "count": 0,
+    "ready": false
+  }
+]
