@@ -6,7 +6,8 @@
     "price": "N1,000",
     "image": "images/image-2.png",
     "count": 0,
-    "ready": true
+    "ready": true,
+    "main" : "This quick chili features ground beef simmered with onion, tomatoes, beans, and seasonings. This easy homemade chili is ready in 15 minutes!"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "price": "N1,200",
     "image": "images/image-3.png",
     "count": 0,
-    "ready": false
+    "ready": false,
+    "main" : "Nothing says football like some chicken wings. The orange glaze makes these wings a touchdown!"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "price": "N1,500",
     "image": "images/image-4.png",
     "count": 0,
-    "ready": true
+    "ready": true,
+    "main" : "This savory stew is inspired by the delicious peanut and tomato West African Maafe dish. The heat from the ginger and red pepper is balanced out by the sweetness of the peanut butter."
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "price": "N1250",
     "image": "images/image-1.png",
     "count": 0,
-    "ready": true
+    "ready": true,
+    "main" : "Sweet or savory, we have got you covered. Stuffed to the brim, these variations will not disappoint."
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "price": "N1,350",
     "image": "images/image-5.png",
     "count": 0,
-    "ready": true
+    "ready": true,
+    "main" : "Is it even a party if there aren’t pinwheel sandwiches? Your friends and family will love these handheld snacks during the game."
   },
   {
     "id": 6,
@@ -51,6 +56,7 @@
     "price": "N1,100",
     "image": "images/image-6.png",
     "count": 0,
-    "ready": false
+    "ready": false,
+    "main" : "Is it even a party if there aren’t pinwheel sandwiches? Your friends and family will love these handheld snacks during the game."
   }
 ]
