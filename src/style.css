@@ -725,7 +725,7 @@ p {
 }
 
 .card {
-  width: calc(202px + 2px);
+  width: 90%;
   border: 0.3px solid #00302e68;
   padding: 30px;
   text-align: center;
