@@ -31,6 +31,8 @@ const Checkout = () => {
             right: 0,
             bottom: 0,
             backgroundColor: "#C4C4C46B",
+            zIndex: 999,
+
           },
           content: {
             position: "absolute",
