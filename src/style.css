@@ -97,7 +97,7 @@ p {
   position: fixed;
   top: 0;
   right: 0;
-  width: 50%;
+  width: 200px;
   height: 100vh;
   background: #fff;
 }
@@ -608,13 +608,14 @@ p {
 
 /* Dashboard */
 .dashboard {
-  padding: 44px 10px 25px 100px;
+  padding: 44px 10px 25px 109px;
 }
 
 .dash__greeting {
-  max-width: 85px;
+  max-width: 80px;
   margin: 0 auto;
 }
+
 
 .dash__sidenav {
   position: fixed;
@@ -624,9 +625,19 @@ p {
   background: #fbfbfb;
   height: 100vh;
   padding: 44px 24px;
+  z-index: 1;
 }
 
-@media screen and (min-width: 668px) {
+@media screen and (max-width: 360px) {
+  .dashboard {
+    padding: 44px 10px 25px 115px;
+  }
+  .dash__sidenav {
+    width: 150px;
+  }
+}
+
+@media screen and (min-width: 425px) {
   .dashboard {
     padding: 44px 20px 25px 270px;
   }
@@ -637,12 +648,16 @@ p {
 
   .dash__greeting {
     max-width: 1200px;
-    width: 100%;
+    width: 80%;
     margin: 0;
   }
 
   .card {
     width: 230px;
+  }
+
+  .grid.all__card {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
@@ -717,12 +732,12 @@ p {
 
 /* Card */
 .grid.all__card {
-  justify-content: center;
+  justify-content: end;
   gap: 25px;
 }
 
 .card {
-  width: calc(202px + 14px);
+  width: calc(202px + 12px);
   border: 0.3px solid #00302e68;
   padding: 30px;
   text-align: center;
@@ -784,7 +799,7 @@ p {
   margin-bottom: 40px;
 }
 .cart__start img {
-  width: 70px;
+  width: 60px;
   height: fit-content;
   justify-self: center;
   margin-right: 10px;
@@ -887,7 +902,7 @@ p {
 }
 
 .counter button {
-  padding: 3px 10px;
+  padding: 3px 9px;
   color: var(--color-primary);
   background: var(--color-buuton);
   border: 0;

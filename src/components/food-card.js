@@ -53,6 +53,7 @@ const FoodCard = ({
             right: 0,
             bottom: 0,
             backgroundColor: "#C4C4C46B",
+            zIndex: 999,
           },
           content: {
             position: "absolute",
@@ -91,7 +92,7 @@ const FoodCard = ({
                 />
                 <button
                   onClick={() => onClick(item)}
-                  className="btn"
+                  className="btn btn-lg"
                   disabled={count === 0 ? "disabled" : null}
                 >
                   Add to cart
