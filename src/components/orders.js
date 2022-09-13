@@ -3,14 +3,14 @@ import { useState } from "react";
 import Modal from "react-modal";
 
 
-const Order = ({ cartItem, handleDelete, count }) => {
+const Order = ({ cartItem, handleDelete, totalNum }) => {
     const [modalIsOpen, setModalIsOpen] = useState(false)
 
   return (
     <div>
       <button className="dash__btn" onClick={() => setModalIsOpen(true)}>
         <img src={icon3} alt="orders" />
-        Orders
+        Orders <span className="badge badge-warning ml-4">{totalNum}</span>
       </button>
 
       <Modal
@@ -31,7 +31,7 @@ const Order = ({ cartItem, handleDelete, count }) => {
             position: "absolute",
             height: "100vh",
             top: "0px",
-            left: "45%",
+            left: "50%",
             right: "0px",
             border: "none",
             background: "#fff",
@@ -50,10 +50,10 @@ const Order = ({ cartItem, handleDelete, count }) => {
             <div className="grid cart">
               <div className="grid grid--1x2 cart__tags">
                 <p>Item</p>
-                <div className="grid grid--1x3L">
+                <div className="grid grid--1x3L cart__sub">
                   <span>Qty</span>
-                  <span>price</span>
-                  <span>Sub-total</span>
+                  <span>Price</span>
+                  <span>Status</span>
                 </div>
               </div>
               <div>
@@ -75,7 +75,7 @@ const Order = ({ cartItem, handleDelete, count }) => {
                       </div>
                     </div>
                     <div className="grid grid--1x3L cart__end">
-                      <h3>{count}</h3>
+                      <h3>{addedFood.count}</h3>
                       <h3>{addedFood.price}</h3>
                       {(addedFood.ready)? <h3 style={{color:"green", fontSize:"11px", margin: "3px"}}>Delivered</h3> : <h3 style={{color:"red", fontSize:"11px",margin: "3px"}}>Cooking</h3>}
                     </div>

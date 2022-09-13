@@ -6,31 +6,38 @@ import RegisterPage from "./pages/register-page";
 import "./style.css";
 import FoodData from "./db.json";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 function App() {
   const productItem = FoodData;
   const [cart, setCart] = useState([]);
-  const [details , setDetails] = useState([])
-  const [count, setCount] = useState(0)
- 
+  const [details, setDetails] = useState([]);
+  const [count, setCount] = useState(0);
 
   const handleIncrement = (product) => {
-    const itemCount = productItem.filter((item) => item.id === product.id )
-    setCount(itemCount.map(c => c.count++))
-  }
+    const itemCount = productItem.filter((item) => item.id === product.id);
+    setCount(itemCount.map((c) => c.count++));
+  };
 
   const handleDecrement = (product) => {
-    const itemCount = productItem.filter((item) => item.id === product.id )
-    setCount(itemCount.map(c => c.count--))
-  }
- 
+    const itemCount = productItem.filter((item) => item.id === product.id);
+    setCount(itemCount.map((c) => c.count--));
+  };
+
   const handleClick = (product) => {
-     setCart([...cart, {...product, ...count+1}])
+    let productExist = cart.find((item) => item.id === product.id);
+
+    if (productExist) {
+      setCart([...cart]);
+      toast.success("Item already exit");
+    } else {
+      setCart([...cart, { ...product }]);
+    }
   };
 
   const handleDetails = (id) => {
-    setDetails(productItem.filter((item) => item.id === id))
-  }
+    setDetails(productItem.filter((item) => item.id === id));
+  };
 
   const handleDelete = (id) => {
     const removeItem = cart.filter((item) => item.id !== id);
@@ -50,6 +57,7 @@ function App() {
           <RegisterPage />
         </Route>
         <Route path={"/dashboard"}>
+          <ToastContainer />
           <Dashboard
             productItem={productItem}
             cartItem={cart}

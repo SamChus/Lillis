@@ -6,6 +6,9 @@ import Cart from "./cart";
 import Order from "./orders";
 
 const Sidenav = ({ cartItem, handleDelete, count}) => {
+
+
+
   return (
     <div className="dash__sidenav">
       <div className="logo">
@@ -20,8 +23,8 @@ const Sidenav = ({ cartItem, handleDelete, count}) => {
         <img src={icon2} alt="profile" />
         Your Profile
       </button>
-     <Order cartItem={cartItem} handleDelete={handleDelete} count={count}/>
-      <Cart cartItem={cartItem} handleDelete={handleDelete} count={count}/>
+     <Order cartItem={cartItem} handleDelete={handleDelete} count={count} totalNum={cartItem.length}/>
+      <Cart cartItem={cartItem} handleDelete={handleDelete} count={count} totalNum={cartItem.length}/>
     </div>
   );
 };
