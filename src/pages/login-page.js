@@ -24,7 +24,7 @@ const LoginPage = () => {
       toast.success("Login Successful")
       setInterval(() => {
         window.location = "/dashboard";
-      }, 1500);
+      }, 2000);
     } else {
       toast.error("Pls create an account")
     }

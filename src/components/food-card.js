@@ -1,46 +1,17 @@
+import icon3 from "../assets/dash-3.svg";
 import { useState } from "react";
 import Modal from "react-modal";
-import Counter from "./counter";
 
-const FoodCard = ({
-  productItem,
-  handleClick,
-  handleDetails,
-  details,
-  handleIncrement,
-  handleDecrement,
-  count,
-}) => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  const onClick = (item) => {
-    handleClick(item);
-    setModalIsOpen(false);
-  };
+const Order = ({ cartItem, handleDelete, totalNum }) => {
+    const [modalIsOpen, setModalIsOpen] = useState(false)
 
   return (
-    <div className="grid grid--1x3 all__card">
-      {productItem?.map((food) => {
-        return (
-          <div
-            className="card"
-            key={food.id}
-            onClick={() => handleDetails(food.id)}
-          >
-            <div onClick={() => setModalIsOpen(true)}>
-              <div>
-                <img src={food.image} alt="" className="card-image" />
-              </div>
-              <h3>{food.name}</h3>
-              <p>{food.content}</p>
-            </div>
-            <div className="flex--box card__footer">
-              <h4>{food.price}</h4>
-              <button onClick={() => setModalIsOpen(true)}>Add to cart</button>
-            </div>
-          </div>
-        );
-      })}
+    <div>
+      <button className="dash__btn" onClick={() => setModalIsOpen(true)}>
+        <img src={icon3} alt="orders" />
+        Orders <span className="badge badge-warning ml-4">{totalNum}</span>
+      </button>
 
       <Modal
         isOpen={modalIsOpen}
@@ -54,56 +25,69 @@ const FoodCard = ({
             bottom: 0,
             backgroundColor: "#C4C4C46B",
             zIndex: 999,
+
           },
           content: {
             position: "absolute",
             height: "100vh",
             top: "0px",
-            left: "40%",
+            left: "50%",
             right: "0px",
             border: "none",
             background: "#fff",
             overflow: "auto",
             WebkitOverflowScrolling: "touch",
             outline: "none",
-            padding: "30px",
+            padding: "20px",
           },
         }}
       >
-        <div>
-          {details?.map((item) => (
-            <div key={item.id}>
-              <div className="details__start">
-                <img src={item.image} alt="details" />
-                <h3>{item.name}</h3>
-                <p>{item.main}</p>
+        {cartItem.length === 0 ? (
+          <div>Still yet to Order</div>
+        ) : (
+          <div className="cart__container">
+            <h3>Your Orders</h3>
+            <div className="grid cart">
+              <div className="grid grid--1x2 cart__tags">
+                <p>Item</p>
+                <div className="grid grid--1x3L cart__sub">
+                  <span>Qty</span>
+                  <span>Price</span>
+                  <span>Status</span>
+                </div>
               </div>
-              <div className="flex--box details__center">
-                <p>{item.price}</p>
-                <p>10-20 Mins</p>
-                <p>10 Pcs Avail</p>
-              </div>
-              <div className="flex--box details__footer">
-                <Counter
-                  handleIncrement={handleIncrement}
-                  handleDecrement={handleDecrement}
-                  item={item}
-                  count={count}
-                />
-                <button
-                  onClick={() => onClick(item)}
-                  className="btn btn-lg"
-                  disabled={count === 0 ? "disabled" : null}
-                >
-                  Add to cart
-                </button>
+              <div>
+                {cartItem?.map((addedFood, index) => (
+                  <div
+                    className="grid grid--1x2 cart__content"
+                    key={index}
+                  >
+                    <div className="flex--box cart__start">
+                      <img src={addedFood.image} alt="cart" />
+                      <div className="cart__name">
+                        <h3>{addedFood.name}</h3>
+                        <button
+                          className="btn btn-sm btn-danger"
+                          onClick={() => handleDelete(addedFood.id)}
+                        >
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                    <div className="grid grid--1x3L cart__end">
+                      <h3>{addedFood.count}</h3>
+                      <h3>{addedFood.price}</h3>
+                      {(addedFood.ready)? <h3 style={{color:"green", fontSize:"11px", margin: "3px"}}>Delivered</h3> : <h3 style={{color:"red", fontSize:"11px",margin: "3px"}}>Cooking</h3>}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        )}
       </Modal>
     </div>
   );
 };
 
-export default FoodCard;
+export default Order;
