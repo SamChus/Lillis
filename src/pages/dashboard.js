@@ -9,9 +9,9 @@ const Dashboard = ({
   handleClick,
   handleDetails,
   details,
+  count,
   handleIncrement,
   handleDecrement,
-  count
 }) => {
   const user = JSON.parse(sessionStorage.getItem("user"));
 
@@ -32,9 +32,9 @@ const Dashboard = ({
         handleClick={handleClick}
         handleDetails={handleDetails}
         details={details}
+        count={count}
         handleIncrement={handleIncrement}
         handleDecrement={handleDecrement}
-        count={count}
       />
     </div>
   );
